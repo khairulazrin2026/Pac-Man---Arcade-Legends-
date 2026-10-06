@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-arcade {
+    font-family: 'Press Start 2P', monospace;
+  }
+  .font-crt {
+    font-family: 'VT323', monospace;
+  }
+  .neon-blue-glow {
+    filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.7)) drop-shadow(0 0 14px rgba(59, 130, 246, 0.4));
+  }
+  .neon-yellow-glow {
+    filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.8));
+  }
+  .neon-ghost-red {
+    filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.8));
+  }
+  .neon-ghost-pink {
+    filter: drop-shadow(0 0 6px rgba(244, 114, 182, 0.8));
+  }
+  .neon-ghost-cyan {
+    filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.8));
+  }
+  .neon-ghost-orange {
+    filter: drop-shadow(0 0 6px rgba(251, 146, 60, 0.8));
+  }
+}
+
+/* CRT Scanline Effect */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-vignette {
+  background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* Subtle arcade cabinet screen glare */
+.crt-glare {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+}
